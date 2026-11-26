@@ -1,0 +1,168 @@
+
+body {
+    margin: 0;
+    background: #f6f8f5;
+    font-family: Arial, sans-serif;
+    color: #102d46;
+}
+
+        /*Top Menu Design (NAVBAR)*/
+#topmenu {
+    background: rgb(36, 182, 67);
+    height: 72px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+
+        /*Logo Design (Just The Letters)*/
+.logo {
+    background: #16865f;
+    color: white;
+    padding: 14px;
+    border-radius: 13px;
+    font-weight: bold;
+}
+
+        /*Home Page Design*/
+.website-name { 
+    margin-left: 12px; 
+}
+
+.website-name h3, .website-name p {
+    margin: 4px; 
+}
+
+.website-name p { 
+    font-size: 8px; 
+    letter-spacing: 2px; 
+    color: #64748b; 
+}
+
+nav { 
+     margin-left: auto; 
+}
+
+nav ul { 
+    display: flex;
+    list-style: none;
+}
+
+nav li { 
+    margin-left: 8px; 
+}
+        /*Button Design*/
+nav button, .quick-card button {
+    border: none;
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button.active, nav button:hover {
+    text-decoration-line: underline;
+    background: #e8f4ee;
+    color: #08764e;
+}
+
+        /*Panel Card Design*/
+main {
+    max-width: 1170px; 
+    margin: auto; 
+    padding: 22px 20px;
+}
+
+.summary-cards, .quick-cards {
+    display: grid;
+    gap: 15px;
+}
+
+.summary-cards { 
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.summary-card, .quick-card, section:not(#home) {
+        background: white;
+        border: 1px solid #dfe7e2;
+        border-radius: 15px;
+        padding: 20px;
+}
+
+.summary-card {
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+}
+.summary-card span, .quick-card span {
+    background: #e8f4ee;
+    color: #00845e;
+    padding: 12px;
+    border-radius: 12px;
+}
+.summary-card small, .quick-card p { 
+    color: #64748b; 
+    font-size: 11px; 
+}
+.quick-access { 
+    margin-top: 60px;
+}
+
+.quick-access > small, .quick-card button { 
+    color: #16865f; 
+    font-weight: bold; 
+}
+
+.quick-cards { 
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.quick-card button { 
+    padding: 0; 
+}
+
+section:not(#home) { 
+    margin-top: 20px; 
+}
+
+input, select { 
+    padding: 12px; 
+    margin: 5px; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+}
+    
+section:not(#home) button { 
+    background: #16865f; 
+    color: white;
+    padding: 12px; 
+    border: 0; 
+    border-radius: 8px; 
+    cursor: pointer; 
+}
+
+.hidden { 
+    display: none; 
+}
+
+        /*Footer Design*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 22px 5%;
+    background: white;
+    border-top: 1px solid #dfe7e2;
+    color: #64748b;
+    font-size: 10px;
+}
+
+
+        /*Responsive Design Code*/
+@media (max-width: 800px) {
+    #topmenu { height: auto; flex-wrap: wrap; padding: 15px; }
+    nav { width: 100%; }
+    .summary-cards, .quick-cards { grid-template-columns: repeat(2, 1fr); }
+}

@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grenada Bus Platform</title>
+    <link rel="stylesheet" href="CSS/websitestyle.css">
+</head>
+    <body>
+    <header id="topmenu">
+        <div class="logo">GBP</div>
+        <div class="website-name">
+            <h3>Grenada Bus Platform</h3>
+            <p>PUBLIC TRANSPORT DEMO SYSTEM</p>
+        </div>
+       <nav>
+            <ul>
+                <li><a href="routes.html"><button>Bus Routes</button></a></li>
+                <li><a href="stops.html"><button>Stop Directory</button></a></li>
+                <li><a href="terminal.html"><button>Bus Terminal</button></a></li>
+                <li><a href="index.html"><button class="active">Dashboard</button></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="small-description-on-card"> <p>NOTE:These Numbers Are Randomized. The Numberplate is Fake.</p></div>
+            <div class="summary-cards">
+                <div class="summary-card">↗ <p> Demo Routes <h2>18</h2></p></div>
+                <div class="summary-card">⌖ <p> Bus Stops <h2>22</h2></p></div>
+                <div class="summary-card">▣ <p> Buses In Queue <h2>38</h2></p></div>
+                <div class="summary-card">✓ <p> Next For Departure<h2>HB 123 (N1)</h2></p></div>
+            </div>
+            <div class="quick-access">
+            <p class="small-heading">QUICK ACCESS</p>
+                <h1>What would you like to do?</h1>
+                    <div class="quick-cards">
+                        <div class="quick-card">
+                            <span>↔</span>
+                            <h3>Explore bus routes</h3>
+                            <p>View stops in travel order, from first to last.</p>
+                            <a href="routes.html"><button>View routes →</button></a>
+                        </div>
+                        <div class="quick-card">
+                            <span>⌕</span>
+                                <h3>Find a bus stop</h3>
+                                    <p>Search the stop directory by name.</p>
+                                    <a href="stops.html"><button>Search stops →</button></a>
+                        </div>
+                        <div class="quick-card">
+                            <span>▤</span>
+                                <h3>Check the terminal</h3>
+                                <p>See buses waiting in first-in, first-out order.</p>
+                                <a href="terminal.html"><button>View terminal →</button></a>
+                        </div>
+                    </div>
+                </div>
+                </section>
+                    <section id="routes" class="hidden">
+                        <h1>Bus Routes</h1>
+                            <select id="routeChoice" onchange="displayRoute()">
+                                <option value="0">St. George's to Grand Anse</option>
+                                <option value="1">St. George's to Grenville</option>
+                            </select>
+                            <ul id="routeList"></ul>
+                            <input id="newStop" placeholder="Enter stop name">
+                            <button onclick="addStop()">Add Stop</button>
+                    </section>
+                    <section id="search" class="hidden">
+                        <h1>Stop Directory</h1>
+                            <input id="searchName" placeholder="Enter stop name">
+                                <button onclick="searchStop()">Search</button>
+                                <p id="searchResult"></p>
+                                <button onclick="sortStops()">Sort Stops</button>
+                                <ul id="stopList"></ul>
+                    </section>
+                    <section id="terminal" class="hidden">
+                        <h1>Bus Terminal</h1>
+                            <input id="busNumber" placeholder="Bus registration">
+                            <input id="destination" placeholder="Destination">
+                            <button onclick="addBus()">Add Bus</button>
+                            <button onclick="departBus()">Depart Bus</button>
+                            <ul id="busList"></ul>
+                            <p id="departureResult"></p>
+                    </section>
+        </main>
+            <script src="Java/dataStructures.js"></script>
+            <script src="Java/algorithms.js"></script>
+            <script src="Java/app.js"></script>
+
+    <footer class="footer">
+        <p>  &copy; <span id="year"></span> Grenada Bus Platform Programming Project. Made by Kayden Andrew of Class IT2B.</p>
+        <span>SAMPLE DATA ONLY. NOT OFFICIAL SERVICE</span>
+    </footer>
+    <script id="date">
+       document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    </body>
+</html>

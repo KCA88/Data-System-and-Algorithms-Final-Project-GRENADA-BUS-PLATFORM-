@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Routes - GBP</title>
+    <link rel="stylesheet" href="CSS/websitestyle.css">
+</head>
+<body>
+<header id="topmenu">
+    <div class="logo">GBP</div>
+    <div class="website-name">
+        <h3>Grenada Bus Platform</h3>
+        <p>PUBLIC TRANSPORT DEMO SYSTEM</p>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><button>Dashboard</button></a></li>
+            <li><a href="routes.html"><button class="active">Bus Routes</button></a></li>
+            <li><a href="stops.html"><button>Stop Directory</button></a></li>
+            <li><a href="terminal.html"><button>Bus Terminal</button></a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h1>Bus Routes</h1>
+        <p>Select a route to view its stops in travel order.</p>
+        <select id="routeChoice" onchange="displayRoute()">
+            <option value="0">St. George's to Grand Anse</option>
+            <option value="1">St. George's to Grenville</option>
+        </select>
+
+        <h3>Route Stops</h3>
+        <ul id="routeList"></ul>
+        
+        <h3>Add a New Stop</h3>
+        <input id="newStop" placeholder="Enter stop name">
+        <button onclick="addStop()">Add Stop</button>
+    </section>
+</main>
+
+<script src="Java/dataStructures.js"></script>
+<script src="Java/algorithms.js"></script>
+<script src="Java/app.js"></script>
+
+</body>
+</html>
